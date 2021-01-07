@@ -8,11 +8,12 @@ import fitnesswebsitecardimg from '../assets/images/FitnessWebsite.png'
 import spacyprojectcardimg from '../assets/images/SpacyProject.png'
 import putioprojectcardimg from '../assets/images/DownloadManager.png'
 import canadacitiesprojectcardimg from '../assets/images/CanadaCities.png'
+import caffeineprojectcardimg from '../assets/images/CaffeineProject2.png'
 import androidSVG from '../assets/icons/android.svg'
 import csharpSVG from '../assets/icons/csharp.svg'
 import dotnetSVG from '../assets/icons/dotnet.svg'
 import figmaSVG from '../assets/icons/figma.svg'
-import githubSVG from '../assets/icons/github.svg'
+import javaSVG from '../assets/icons/java.svg'
 import kotlinSVG from '../assets/icons/kotlin.svg'
 import mlkitSVG from '../assets/icons/mlkit.png'
 import oauthSVG from '../assets/icons/oauth.svg'
@@ -51,7 +52,7 @@ class Footer extends React.Component {
                                 <p> Created for INFO 5126 (Mobile Development) – ML Kit. Project requirements available upon request.</p>
                             </div>
                             <p class="">
-                                Android application to achieve artistic style transfer between a pre-set number of "style" photos and either a new photo taken during execution or one selected from the gallery.
+                                Android application designed to demonstrate artistic style transfer between a pre-set number of "style" photos and either a new photo taken during execution or one selected from the gallery.
                             </p>
                             <div class="mt-10 flex justify-between items-center">
                                 <div class="inline-flex">
@@ -151,7 +152,7 @@ class Footer extends React.Component {
                                 <p>Created for INFO 3142 (Emerging Technologies) – Stock Buy/Sell Estimator. Project requirements available upon request.</p>
                             </div>
                             <p class="">
-                                Python application that utilizes NLP processing from the spaCy library to extract some free-form information from a series of (prefiltered) brokerage purchase requests the n amount and m number of companies.
+                                Python application that utilizes NLP processing from the spaCy library to extract some free-form information from a series of (prefiltered) brokerage purchase requests to purchase for n amount and m number of companies.
                             </p>
                             <div class="mt-10 flex justify-between items-center">
                                 <div class="inline-flex">
@@ -193,7 +194,7 @@ class Footer extends React.Component {
 
                             </div>
                             <p class="">
-                                Work in progress React based SPA download manager for put.io. Interacts with an OAuth RESTful API to build file and folder information as well as generate direct download links.
+                                Work in progress React based single-page-application (SPA) download manager for put.io. Interacts with an OAuth RESTful API to build file and folder information as well as generate direct download links.
                             </p>
                             <div class="mt-10 flex justify-between items-center">
                                 <div class="inline-flex">
@@ -214,6 +215,47 @@ class Footer extends React.Component {
                                         alt=""
                                         class="w-8 m-1"
                                         title="RESTful API"
+                                    />
+                                </div>
+                                <p class="">
+                                    Read more
+                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Caffeine Dosage Tracker */}
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative overflow-hidden pb-60">
+                        <img
+                            class="absolute h-full w-full object-cover object-top"
+                            src={caffeineprojectcardimg}
+                            alt=""
+                        />
+                    </div>
+                    <div class="relative bg-purple-200">
+                        <div class="py-5 px-8">
+                            <h3 class="text-2xl font-bold">Caffeine Dosage Tracker</h3>
+                            <div class="text-gray-600 text-xs font-medium flex mb-4 mt-2">
+                                <p> Created for INFO 3136 (Mobile Development) – Event Recorder. Project requirements available upon request.</p>
+                            </div>
+                            <p class="">
+                                Android application designed to track caffeine intake over time and then display that information in an interacable (click/zoom) graph visualization of dosage over time.
+                            </p>
+                            <div class="mt-10 flex justify-between items-center">
+                                <div class="inline-flex">
+                                    <img
+                                        src={androidSVG}
+                                        alt=""
+                                        class="w-6 m-1"
+                                        title="Android and Android Studio"
+                                    />
+                                    <img
+                                        src={javaSVG}
+                                        alt=""
+                                        class="w-6 m-1"
+                                        title="Java"
                                     />
                                 </div>
                                 <p class="">
@@ -265,77 +307,6 @@ class Footer extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* Unused */}
-                {/* <div class="rounded-lg overflow-hidden">
-                    <div class="relative overflow-hidden pb-60">
-                        <img
-                            class="absolute h-full w-full object-cover object-center"
-                            src={mobileprojectcardimg}
-                            alt=""
-                        />
-                    </div>
-                    <div class="relative bg-purple-200">
-                        <div class="py-5 px-8">
-                            <h3 class="text-2xl font-bold">Artistic Style Transfer with  TensorFlow</h3>
-                            <div class="text-gray-600 text-xs font-medium flex mb-4 mt-2">
-                                <p>&nbsp;</p>
-                                <a href="https://www.ls.graphics/" class="">
-                                    Created for INFO 5126 (Mobile Development) – ML Kit. Project requirements available&nbsp;
-                                        <a href="https://www.ls.graphics/" class="hover:text-black transition duration-300 ease-in-out">
-                                        here.
-                                        </a>
-                                </a>
-                            </div>
-                            <p class="">
-                                Android application to achieve artistic style transfer between a pre-set number of "style" photos and either a new photo taken during execution or one selected from the gallery.
-                                </p>
-                            <div class="mt-10 flex justify-between items-center">
-                                <div class="inline-flex">
-                                    <img
-                                        src={androidSVG}
-                                        alt=""
-                                        class="w-6 m-1"
-                                        title="Android and Android Studio"
-                                    />
-                                    <img
-                                        src={kotlinSVG}
-                                        alt=""
-                                        class="w-6 m-1"
-                                        title="Kotlin"
-                                    />
-                                    <img
-                                        src={githubSVG}
-                                        alt=""
-                                        class="w-6 m-1"
-                                        title="Kotlin"
-                                    />
-                                    <img
-                                        src={figmaSVG}
-                                        alt=""
-                                        class="w-6 h-8 m-1"
-                                        title="Figma"
-                                    />
-                                    <img
-                                        src={mlkitSVG}
-                                        alt=""
-                                        class="w-10 h-8 m-1"
-                                        title="ML Kit"
-                                    />
-                                    <img
-                                        src={tensorflowSVG}
-                                        alt=""
-                                        class="w-6 m-1"
-                                        title="Tensorflow"
-                                    />
-                                </div>
-                                <p class="">
-                                    Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
-                            </div>
-                        </div>
-                    </div> 
-                </div> */}
             </div >
         );
     }

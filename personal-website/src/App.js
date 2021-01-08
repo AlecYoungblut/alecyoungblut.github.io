@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="block bg-gray-200">
+        <a id="top"></a>
         <Navbar></Navbar>
         <About></About>
         <div id="portfolio" className="pt-24 text-5xl font-semibold">

@@ -8,12 +8,15 @@ class Footer extends React.Component {
     render() {
         return (
             <footer className="bg-purple-800 mx-auto w-all">
-                <div className="mx-auto px-6 pt-10 pb-6 mt-16">
+                <div className="mx-auto px-6 pt-6 pb-2 mt-16">
                     <div className="flex justify-between mb-4">
-                        <div className="text-white">
+                        <div className="text-white mt-5">
                             <p>© Alec Youngblut (2021-01-08) </p>
                         </div>
                         <div className="text-right text-white">
+                            <p className="text-center text-white">
+                                Contact Info
+                            </p>
                             <ul className="inline-flex">
                                 <li>
                                     <a className="hover:font-bold " href="mailto:me@alecyoungblut.ca">

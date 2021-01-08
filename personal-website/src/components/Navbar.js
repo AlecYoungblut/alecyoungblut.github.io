@@ -23,7 +23,7 @@ class Navbar extends React.Component {
                 <div className="lg:pl-6 pl-20 pr-6 py-4 flex items-center justify-between">
                     <div className="inline-flex">
                         <img className="object-contain h-14 rounded-full mr-5" src="https://media-exp1.licdn.com/dms/image/C4D03AQHLzAG5f8JdUQ/profile-displayphoto-shrink_200_200/0/1539027209316?e=1615420800&v=beta&t=u9NSp1kxTkGr0-_OdrrFkChbp7CQvavJD8uZKaWQ2EE" alt="Girl in a jacket"></img>
-                        <a className="font-bold text-5xl hover:text-purple-100 text-white" href="#">
+                        <a className="font-bold text-5xl hover:text-purple-100 text-white" href="#top">
                             Alec Youngblut
                         </a>
                     </div>

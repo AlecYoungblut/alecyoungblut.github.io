@@ -181,7 +181,7 @@ class Footer extends React.Component {
                                 <p>Created for INFO 3142 (Emerging Technologies) – Stock Buy/Sell Estimator. Project requirements available upon request.</p>
                             </div>
                             <p class="">
-                                Python application that utilizes NLP processing from the spaCy library to extract some free-form information from a series of (prefiltered) brokerage purchase requests to purchase for n amount and m number of companies.
+                                Python application that utilizes NLP processing from the spaCy library to extract some free-form information from a series of (prefiltered) brokerage purchase requests to purchase for <span className="font-semibold">n</span> amount from <span className="font-semibold">m</span> number of companies.
                             </p>
                             <div class="mt-10 flex justify-between items-center">
                                 <div class="inline-flex">

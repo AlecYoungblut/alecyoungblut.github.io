@@ -10,9 +10,10 @@ function App() {
       <div className="block bg-gray-200">
         <Navbar></Navbar>
         <About></About>
-        <div>
-          Previous Projects
+        <div id="portfolio" className="pt-24 text-5xl font-semibold">
+          Portfolio
         </div>
+        <span className="pt-10 text-xl font-semibold italic opacity-40">(last updated 2021-01-08)</span>
         <Cards></Cards>
         <Footer></Footer>
       </div>

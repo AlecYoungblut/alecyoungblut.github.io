@@ -1,14 +1,21 @@
 import React from "react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import MobileProject1Modal from './modals/MobileProject1Modal.js';
+import MobileProject2Modal from './modals/MobileProject2Modal.js';
+import FitnessWebsiteModal from './modals/FitnessWebsiteModal.js';
+
 import mobileprojectcardimg from '../assets/images/MobileProject.png'
 import fitnesswebsitecardimg from '../assets/images/FitnessWebsite.png'
 import spacyprojectcardimg from '../assets/images/SpacyProject.png'
 import putioprojectcardimg from '../assets/images/DownloadManager.png'
 import canadacitiesprojectcardimg from '../assets/images/CanadaCities.png'
 import caffeineprojectcardimg from '../assets/images/CaffeineProject2.png'
+
 import androidSVG from '../assets/icons/android.svg'
 import csharpSVG from '../assets/icons/csharp.svg'
 import dotnetSVG from '../assets/icons/dotnet.svg'
@@ -33,9 +40,26 @@ library.add(
 );
 
 class Footer extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            show: false
+        };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    }
+
+    showModal = () => {
+        this.setState({ show: true });
+    };
+
+    hideModal = () => {
+        this.setState({ show: false });
+    };
+
     render() {
         return (
-            <div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="container mx-auto mt-24 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
                 {/* Mobile Project */}
                 <div class="rounded-lg overflow-hidden">
                     <div class="relative overflow-hidden pb-60">
@@ -47,7 +71,7 @@ class Footer extends React.Component {
                     </div>
                     <div class="relative bg-purple-200">
                         <div class="py-5 px-8">
-                            <h3 class="text-2xl font-bold">Artistic Style Transfer with  TensorFlow</h3>
+                            <h3 class="text-2xl font-bold">Artistic Style Transfer with TensorFlow</h3>
                             <div class="text-gray-600 text-xs font-medium flex mb-4 mt-2">
                                 <p> Created for INFO 5126 (Mobile Development) – ML Kit. Project requirements available upon request.</p>
                             </div>
@@ -87,10 +111,13 @@ class Footer extends React.Component {
                                         title="Tensorflow"
                                     />
                                 </div>
-                                <p class="">
+                                <MobileProject2Modal show={this.state.show} handleClose={this.hideModal}>
+                                </MobileProject2Modal>
+                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -128,10 +155,12 @@ class Footer extends React.Component {
                                         title="Tailwind CSS"
                                     />
                                 </div>
-                                <p class="">
+                                <FitnessWebsiteModal show={this.state.show} handleClose={this.hideModal}>
+                                </FitnessWebsiteModal>
+                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -258,10 +287,12 @@ class Footer extends React.Component {
                                         title="Java"
                                     />
                                 </div>
-                                <p class="">
+                                <MobileProject1Modal show={this.state.show} handleClose={this.hideModal}>
+                                </MobileProject1Modal>
+                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
                             </div>
                         </div>
                     </div>

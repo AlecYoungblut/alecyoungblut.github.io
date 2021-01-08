@@ -1,12 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-
-library.add(
-    faLinkedin,
-    faGithub
-);
+import gmailSVG from '../assets/icons/gmail.svg'
+import linkedinSVG from '../assets/icons/linkedin.svg'
+import githubSVG from '../assets/icons/github.svg'
 
 
 class Footer extends React.Component {
@@ -16,15 +11,41 @@ class Footer extends React.Component {
                 <div className="mx-auto px-6 pt-10 pb-6 mt-16">
                     <div className="flex justify-between mb-4">
                         <div className="text-white">
-                            <p>© Alec Youngblut 2021.</p>
+                            <p>© Alec Youngblut (2021-01-08) </p>
                         </div>
                         <div className="text-right text-white">
-                            <a className="hover:font-bold " href="/">
-                                <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" className="mr-2 text-white hover:text-blue-500" />
-                            </a>
-                            <a className="hover:font-bold" href="/">
-                                <FontAwesomeIcon icon={['fab', 'github']} size="2x" className="mr-2 text-white hover:text-black" />
-                            </a>
+                            <ul className="inline-flex">
+                                <li>
+                                    <a className="hover:font-bold " href="mailto:me@alecyoungblut.ca">
+                                        <img
+                                            src={gmailSVG}
+                                            alt=""
+                                            class="w-8 m-1"
+                                            title="Kotlin"
+                                        />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="" href="https://www.linkedin.com/in/alec-youngblut-57bb7a171/" target="_blank">
+                                        <img
+                                            src={linkedinSVG}
+                                            alt=""
+                                            class="w-8 m-1"
+                                            title="Kotlin"
+                                        />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/AlecYoungblut" target="_blank">
+                                        <img
+                                            src={githubSVG}
+                                            alt=""
+                                            class="w-8 m-1"
+                                            title="Kotlin"
+                                        />
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

@@ -8,6 +8,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import MobileProject1Modal from './modals/MobileProject1Modal.js';
 import MobileProject2Modal from './modals/MobileProject2Modal.js';
 import FitnessWebsiteModal from './modals/FitnessWebsiteModal.js';
+import StockProjectModal from './modals/StockProjectModal.js';
+import DownloadManagerModal from './modals/PutioProjectModal.js';
+import CanadaCitiesProjectModal from './modals/CanadaCitiesProjectModal.js';
 
 import mobileprojectcardimg from '../assets/images/MobileProject.png'
 import fitnesswebsitecardimg from '../assets/images/FitnessWebsite.png'
@@ -43,25 +46,26 @@ class Footer extends React.Component {
     constructor() {
         super();
         this.state = {
-            show: false
+            show: false,
+            modalId: null
         };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
     }
 
-    showModal = () => {
-        this.setState({ show: true });
+    showModal = (modal) => {
+        this.setState({ show: true, modalId: modal });
     };
 
     hideModal = () => {
-        this.setState({ show: false });
+        this.setState({ show: false, modalId: null });
     };
 
     render() {
         return (
-            <div class="container mx-auto mt-24 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="container mx-auto mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3" >
                 {/* Mobile Project */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-center"
@@ -111,19 +115,18 @@ class Footer extends React.Component {
                                         title="Tensorflow"
                                     />
                                 </div>
-                                <MobileProject2Modal show={this.state.show} handleClose={this.hideModal}>
+                                <MobileProject2Modal show={this.state.modalId === "MobileProject2"} handleClose={this.hideModal}>
                                 </MobileProject2Modal>
-                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
+                                <button type="button" onClick={() => this.showModal("MobileProject2")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
                                     <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
                                 </button>
-
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
                 {/* Fitness Website */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-center"
@@ -155,18 +158,18 @@ class Footer extends React.Component {
                                         title="Tailwind CSS"
                                     />
                                 </div>
-                                <FitnessWebsiteModal show={this.state.show} handleClose={this.hideModal}>
+                                <FitnessWebsiteModal show={this.state.modalId === "FitnessWebsite"} handleClose={this.hideModal}>
                                 </FitnessWebsiteModal>
-                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
+                                <button type="button" onClick={() => this.showModal("FitnessWebsite")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
                                     <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
                 {/* Nlm and SpaCy */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-left-bottom"
@@ -176,7 +179,7 @@ class Footer extends React.Component {
                     </div>
                     <div class="relative bg-purple-200">
                         <div class="py-5 px-8">
-                            <h3 class="text-2xl font-bold">Stock Buy/Sell Estimator</h3>
+                            <h3 class="text-2xl font-bold">Natural Language Processing with spaCy</h3>
                             <div class="text-gray-600 text-xs font-medium flex mb-4 mt-2">
                                 <p>Created for INFO 3142 (Emerging Technologies) – Stock Buy/Sell Estimator. Project requirements available upon request.</p>
                             </div>
@@ -198,16 +201,18 @@ class Footer extends React.Component {
                                         title="spaCy"
                                     />
                                 </div>
-                                <p class="">
+                                <StockProjectModal show={this.state.modalId === "StockProject"} handleClose={this.hideModal}>
+                                </StockProjectModal>
+                                <button type="button" onClick={() => this.showModal("StockProject")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
                 {/* Put.io Downloader */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-center"
@@ -246,16 +251,18 @@ class Footer extends React.Component {
                                         title="RESTful API"
                                     />
                                 </div>
-                                <p class="">
+                                <DownloadManagerModal show={this.state.modalId === "DownloadManager"} handleClose={this.hideModal}>
+                                </DownloadManagerModal>
+                                <button type="button" onClick={() => this.showModal("DownloadManager")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
                 {/* Caffeine Dosage Tracker */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-top"
@@ -287,18 +294,18 @@ class Footer extends React.Component {
                                         title="Java"
                                     />
                                 </div>
-                                <MobileProject1Modal show={this.state.show} handleClose={this.hideModal}>
+                                <MobileProject1Modal show={this.state.modalId === "MobileProject1"} handleClose={this.hideModal}>
                                 </MobileProject1Modal>
-                                <button type="button" onClick={this.showModal} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
+                                <button type="button" onClick={() => this.showModal("MobileProject1")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
                                     <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
                 {/* Canada Cities */}
-                <div class="rounded-lg overflow-hidden">
+                < div class="rounded-lg overflow-hidden" >
                     <div class="relative overflow-hidden pb-60">
                         <img
                             class="absolute h-full w-full object-cover object-center"
@@ -313,7 +320,7 @@ class Footer extends React.Component {
                                 <p>Created for INFO 5101 (C# Advanced Topics) – Canada Cities. Project requirements available upon request.</p>
                             </div>
                             <p class="">
-                                .NET project that utilizes parsing from JSON/XML/CSV and C# generics to display information for each city and province in Canada a .NET Windows Form.
+                                .NET project that utilizes parsing from JSON/XML/CSV and C# generics to display information for each city and province in Canada within a Windows form.
                             </p>
                             <div class="mt-10 flex justify-between items-center">
                                 <div class="inline-flex">
@@ -330,14 +337,16 @@ class Footer extends React.Component {
                                         title="Microsoft .NET"
                                     />
                                 </div>
-                                <p class="">
+                                <CanadaCitiesProjectModal show={this.state.modalId === "CanadaCities"} handleClose={this.hideModal}>
+                                </CanadaCitiesProjectModal>
+                                <button type="button" onClick={() => this.showModal("CanadaCities")} class="flex rounded-full font-bold text-gray px-4 py-1 transition duration-400 ease-in-out hover:bg-purple-400">
                                     Read more
-                                        <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1" />
-                                </p>
+                                    <FontAwesomeIcon icon={['fa', 'arrow-right']} size="1x" className="ml-1 mt-1 " />
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
             </div >
         );
     }

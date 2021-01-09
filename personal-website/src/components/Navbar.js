@@ -19,7 +19,7 @@ class Navbar extends React.Component {
     }
     render() {
         return (
-            <section className="bg-purple-800 mx-auto w-full fixed z-50">
+            <section className="bg-purple-800 mx-auto w-full z-50">
                 <div className="lg:pl-6 pl-20 pr-6 py-4 flex items-center justify-between">
                     <div className="inline-flex">
                         <img className="object-contain h-14 rounded-full mr-5" src="https://media-exp1.licdn.com/dms/image/C4D03AQHLzAG5f8JdUQ/profile-displayphoto-shrink_200_200/0/1539027209316?e=1615420800&v=beta&t=u9NSp1kxTkGr0-_OdrrFkChbp7CQvavJD8uZKaWQ2EE" alt="Girl in a jacket"></img>

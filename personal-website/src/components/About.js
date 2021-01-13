@@ -18,14 +18,17 @@ class About extends React.Component {
                             Hello! My name's Alec!
                         </p>
                         <p className="pt-8">
-                            I'm a recent graduate from Fanshawe College's Computer Programmer Analyst course and I am a fullstack developer situated in my hometown of London, Ontario. This websites purpose is to act as my portfolio for my professional development career as well as for my own personal projects and interests.
+                            I'm a recent graduate from Fanshawe College's Computer Programmer Analyst course as well as a full stack developer situated in my hometown of London, Ontario.
                         </p>
                         <p className="pt-4">
-                            While I throughly enjoy all aspects of programming and problem solving, I am confident in my ability to learn and to adapt to whatever need is required of me.
-				            </p>
+                            This website acts as my portfolio of work for both my personal projects and professional career.
+                        </p>
+                        <p className="pt-4">
+                            I throughly enjoy all aspects of programming and problem solving and I am confident in my ability to learn and to adapt to whatever client needs may be required of me
+                        </p>
                         <p className="pt-8"></p>
                         <p>
-                            I am currently actively seeking employement as a Full Stack developer, if you've stumbled upon this portfolio and wish to speak further, please do not hesitate to reach out!
+                            I am currently actively seeking employement as a full stack developer, if you've stumbled upon this portfolio and wish to speak further or for more information, please do not hesitate to reach out!
                         </p>
                     </div>
                     <div className="text-xl font-semibold">

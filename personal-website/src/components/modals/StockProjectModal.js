@@ -30,7 +30,7 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                                 alt=""
                             />
                         </div>
-                        <div class="w-2/3 m-2 mt-4">
+                        <div class="w-3/4 m-2 mt-4">
                             <h1 class="text-gray-900 font-bold text-3xl">Natural Language Processing with spaCy</h1>
                             <div class='mt-3 mx-3 flex'>
                                 <span class="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer" >#Python</span>
@@ -38,6 +38,9 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                             </div>
                             <p class="text-gray-600 text-sm text-left p-4">
                                 This project was a Python command line application that was created and designed to utilizes NLP processing from the spaCy library to extract some free-form information from a series of (prefiltered) brokerage purchase requests to purchase for n amount from m number of companies. This data is then outputted to console in an easy to decipher form.
+                            </p>
+                            <p class="text-blue-700 underline text-sm text-left p-4">
+                                <p className="hover:text-blue-300"><a href="https://github.com/AlecYoungblut/python-and-spaCy" target="_blank">Github Repository</a></p>
                             </p>
                         </div>
                         <button type="button" class="top-0 h-1/5" onClick={handleClose}>

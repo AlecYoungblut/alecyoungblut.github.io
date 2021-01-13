@@ -34,6 +34,9 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                             <p class="text-gray-600 text-sm text-left p-4">
                                 This project is a work in progress React based single-page-application (SPA) download manager for put.io. Interacts with an OAuth RESTful API to build file and folder information as well as generate direct download links.
                             </p>
+                            <p class="text-blue-700 underline text-sm text-left pt-2 px-4">
+                                <p className="hover:text-blue-300"><a href="https://github.com/AlecYoungblut/putio-download-manager" target="_blank">Github Repository</a></p>
+                            </p>
                         </div>
                         <button type="button" class="top-0 h-1/5" onClick={handleClose}>
                             <FontAwesomeIcon icon={['fa', 'times-circle']} size="2x" className="m-1 text-red-700" />

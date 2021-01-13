@@ -17,7 +17,7 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                 {children}
                 <div class="p-2">
                     <div class="flex bg-white shadow-lg rounded-lg overflow-hidden p-2">
-                        <div class="bg-cover">
+                        <div class="bg-cover pt-6">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/feU7wKaeQDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="w-2/3 m-2 mt-4">
@@ -28,6 +28,10 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                             </div>
                             <p class="text-gray-600 text-sm text-left p-4">
                                 This website is a responsive React single-page-application (SPA) with Tailwind CSS created for a friend's upcoming solo fitness career. The pandemic has currently restricted client access and as such there are still placeholders for text and images.
+                            </p>
+                            <p class="text-blue-700 underline text-sm text-left p-4">
+                                <p className="hover:text-blue-300"><a href="https://github.com/AlecYoungblut/fitness-website" target="_blank">Github Repository</a></p>
+                                <p className="hover:text-blue-300"><a href="https://www.youtube.com/watch?v=feU7wKaeQDY&feature=youtu.be" target="_blank">YouTube Demo</a></p>
                             </p>
                         </div>
                         <button type="button" class="top-0 h-1/5" onClick={handleClose}>

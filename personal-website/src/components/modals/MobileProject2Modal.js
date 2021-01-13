@@ -33,6 +33,10 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                             <p class="text-gray-600 text-sm text-left p-4">
                                 This project was an Android application that was created and designed to demonstrate artistic style transfer between a pre-set number of "style" photos and either a new photo taken during execution or one selected from the gallery. This project was created to suit the project requirements for INFO 5126 (Mobile Development) of Fanshawe’s Computer Programmer Analyst course. This project took advantage of a library that is utilized by MLKit called TensorFlow to create pastiches (a work of visual art, literature, theatre or music that imitates the style or character of the work of one or more artists) through the concept of Artistic Style Transfer by utilizing the models that are contained within the TensorFlow library.
                             </p>
+                            <p class="text-blue-700 underline text-sm text-left p-4">
+                                <p className="hover:text-blue-300"><a href="https://github.com/AlecYoungblut/mobile-final-project" target="_blank">Github Repository</a></p>
+                                <p className="hover:text-blue-300"><a href="https://www.figma.com/file/nKY6p23G9jQwwUivwUxl6I/Mobile-Design-MLKit-Project?node-id=0%3A1" target="_blank">Figma Design</a></p>
+                            </p>
                         </div>
                         <button type="button" class="top-0 h-1/5" onClick={handleClose}>
                             <FontAwesomeIcon icon={['fa', 'times-circle']} size="2x" className="m-1 text-red-700" />

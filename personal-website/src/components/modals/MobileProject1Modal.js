@@ -3,6 +3,7 @@ import mobileprojectcardimg from '../../assets/images/MobileProject.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import caffeineprojectcardimg from '../../assets/images/CaffeineProject2.png'
 
 library.add(
     faTimesCircle
@@ -18,7 +19,11 @@ const MobileProject2Modal = ({ handleClose, show, children }) => {
                 <div class="p-2">
                     <div class="flex bg-white shadow-lg rounded-lg overflow-hidden p-2">
                         <div class="bg-cover">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PVWGOjtIWP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <img
+                                class="h-full w-full object-cover object-left-bottom"
+                                src={caffeineprojectcardimg}
+                                alt=""
+                            />
                         </div>
                         <div class="w-2/3 m-2 mt-4">
                             <h1 class="text-gray-900 font-bold text-3xl">Caffeine Dosage Tracker</h1>

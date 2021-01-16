@@ -14,7 +14,7 @@ function App() {
         <div className="pt-6 text-5xl font-semibold">
           Portfolio
         </div>
-        <span id="portfolio" className="pt-10 text-xl font-semibold italic opacity-40">(last updated 2021-01-09)</span>
+        <span id="portfolio" className="pt-10 text-xl font-semibold italic opacity-40">(last updated 2021-01-16</span>
         <Cards></Cards>
         <Footer></Footer>
       </div>

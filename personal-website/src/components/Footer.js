@@ -29,7 +29,7 @@ class Footer extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="" href="https://www.linkedin.com/in/alec-youngblut-57bb7a171/" target="_blank">
+                                    <a className="" href="https://www.linkedin.com/in/alecyoungblut/" target="_blank">
                                         <img
                                             src={linkedinSVG}
                                             alt=""
